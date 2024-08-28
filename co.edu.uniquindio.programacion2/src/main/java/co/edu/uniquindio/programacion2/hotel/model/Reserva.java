@@ -16,6 +16,9 @@ public class Reserva {
         this.fechaSalida = fechaSalida;
     }
 
+    public Reserva() {
+    }
+
     public long calcularDuracion() {
          return ChronoUnit.DAYS.between(fechaEntrada, fechaSalida);
     }

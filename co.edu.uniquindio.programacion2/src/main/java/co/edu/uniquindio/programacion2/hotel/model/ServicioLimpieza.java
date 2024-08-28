@@ -7,6 +7,9 @@ public class ServicioLimpieza extends Servicio implements IConsumible {
         super(nombre, precio);
     }
 
+    public ServicioLimpieza() {
+    }
+
     @Override
     public void consumir() {
         System.out.println("Utilizando el servicio de Limpieza: " + getNombre());

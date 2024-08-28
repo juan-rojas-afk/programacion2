@@ -9,10 +9,14 @@ public class Hotel {
 
     private List<Cliente> listaClientes;
     private List<Habitacion> listaHabitaciones;
+    private List<Reserva> ListaDeReservas;
+    private List<Servicio> ListaDeServicios;
 
     public Hotel() {
         this.listaClientes = new ArrayList<>();
         this.listaHabitaciones = new ArrayList<>();
+        this.ListaDeServicios = new ArrayList<>();
+        this.ListaDeReservas = new ArrayList<>();
     }
 
     public void agregarCliente(Cliente cliente) {
@@ -21,6 +25,14 @@ public class Hotel {
 
     public void agregarHabitacion(Habitacion habitacion) {
         listaHabitaciones.add(habitacion);
+    }
+
+    public void agregarReserva(Reserva reserva) {
+        ListaDeReservas.add(reserva);
+    }
+
+    public void agregarServico(Servicio servicio) {
+        ListaDeServicios.add(servicio);
     }
 
     public String getNombre() {
@@ -45,5 +57,21 @@ public class Hotel {
 
     public void setListaHabitaciones(List<Habitacion> listaHabitaciones) {
         this.listaHabitaciones = listaHabitaciones;
+    }
+
+    public List<Reserva> getListaReservas() {
+        return ListaDeReservas;
+    }
+
+    public void setListaReservas(List<Reserva> listaReservas) {
+        ListaDeReservas = listaReservas;
+    }
+
+    public List<Servicio> getListaServicios() {
+        return ListaDeServicios;
+    }
+
+    public void setListaServicios(List<Servicio> listaServicios) {
+        ListaDeServicios = listaServicios;
     }
 }

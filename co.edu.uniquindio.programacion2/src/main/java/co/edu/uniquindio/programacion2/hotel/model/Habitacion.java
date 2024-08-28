@@ -1,23 +1,27 @@
 package co.edu.uniquindio.programacion2.hotel.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Habitacion {
     private String numeroHabitacion;
     private TipoHabitacion tipoHabitacion;
     private double precio;
-    private List<Servicio> servicios;
+    public List<Servicio> servicios;
 
     public Habitacion(String numeroHabitacion, TipoHabitacion tipoHabitacion, double precio) {
         this.numeroHabitacion = numeroHabitacion;
         this.tipoHabitacion = tipoHabitacion;
         this.precio = precio;
-        this.servicios = new ArrayList<Servicio>();
+        this.servicios = new ArrayList<>();
+    }
+
+    public Habitacion() {
     }
 
     public void agregarServicio (Servicio servicio) {
-        servicios.add(servicio);
+        this.servicios.add(servicio);
     }
 
     public List<Servicio> obtenerServicios() {
@@ -49,10 +53,10 @@ public class Habitacion {
     }
 
     public List<Servicio> getServicios() {
-        return servicios;
+        return Collections.unmodifiableList(servicios);
     }
 
-    public void setServicios(List<Servicio> servicios) {
+    public void setServicios() {
         this.servicios = servicios;
     }
 }

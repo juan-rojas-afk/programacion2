@@ -1,6 +1,7 @@
 package co.edu.uniquindio.programacion2.hotel.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Cliente {
@@ -14,8 +15,11 @@ public class Cliente {
         this.reservas = new ArrayList<Reserva>();
     }
 
+    public Cliente() {
+    }
+
     public void agregarReserva(Reserva reserva) {
-        reservas.add(reserva);
+        this.reservas.add(reserva);
     }
 
     public List<Reserva> obtenerReservas() {
@@ -49,7 +53,7 @@ public class Cliente {
     }
 
     public List<Reserva> getReservas() {
-        return reservas;
+        return Collections.unmodifiableList(reservas);
     }
 
     public void setReservas(List<Reserva> reservas) {

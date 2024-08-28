@@ -10,9 +10,11 @@ public class ServicioDeHabitacion extends Servicio implements IConsumible {
         this.descripcion = descripcion;
     }
 
+    public ServicioDeHabitacion() {
+    }
+
     @Override
     public void consumir() {
         System.out.println("Consumiendo servicio en la habitación" + descripcion);
     }
-
 }

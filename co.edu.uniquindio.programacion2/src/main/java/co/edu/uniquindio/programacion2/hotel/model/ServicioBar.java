@@ -7,6 +7,9 @@ public class ServicioBar extends Servicio implements IConsumible {
         super(nombre, precio);
     }
 
+    public ServicioBar() {
+    }
+
     @Override
     public void consumir() {
         System.out.println("Disfutrando del servicio de Bar" + getNombre());
