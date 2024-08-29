@@ -15,9 +15,6 @@ public class Cliente {
         this.reservas = new ArrayList<Reserva>();
     }
 
-    public Cliente() {
-    }
-
     public void agregarReserva(Reserva reserva) {
         this.reservas.add(reserva);
     }

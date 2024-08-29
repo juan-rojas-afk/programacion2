@@ -17,9 +17,6 @@ public class Habitacion {
         this.servicios = new ArrayList<>();
     }
 
-    public Habitacion() {
-    }
-
     public void agregarServicio (Servicio servicio) {
         this.servicios.add(servicio);
     }
